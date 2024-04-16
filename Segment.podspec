@@ -10,6 +10,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '14.0'
   s.tvos.deployment_target = '14.0'
   s.swift_version = '5.0'
-  s.source_files = 'Sources/Segment/**/*'
+  s.source_files = 'Sources/Segment/**/*.swift'
+  s.resource_bundles = {
+    'Segment_Privacy' => ['Sources/Segment/Resources/PrivacyInfo.xcprivacy'],
+  }
   s.dependency 'Sovran', '~> 1.0.2'
 end
